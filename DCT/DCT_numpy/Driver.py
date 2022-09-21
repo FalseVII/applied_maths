@@ -12,9 +12,9 @@ def main():
     dct.printMatrix(dct.C, 1)
     print("\n\nDecompressed Message:")
     dct.QuantizationStepInverse();
-    dct.Claculate_IDCT()
+    dct.Calculate_IDCT()
     dct.printMatrix(dct.fin, 1)
-    dct.compare()
+    dct.Compare()
 
 if __name__ == "__main__":
     main()
