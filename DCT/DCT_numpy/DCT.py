@@ -75,7 +75,6 @@ class DCT_Demo(object):
     def printMatrix(self, npArray, type):
         if type == 1:
             for i in range(self.N):
-                print(" ")
                 for j in range(self.N):
                     print("{0}".format(npArray[i][j]), end=' ')
                 print(" ")
