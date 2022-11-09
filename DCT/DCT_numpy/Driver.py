@@ -1,4 +1,4 @@
-from DCT import DCT_Demo
+from A00261488_Vladyslav_Baran.DCT import DCT_Demo
 
 def main():
     value = int(input("Enter the value of Q: "))

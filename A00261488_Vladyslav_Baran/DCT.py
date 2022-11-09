@@ -3,7 +3,7 @@ import numpy as np
 
 
 class DCT_Demo(object):
-    def __init__(self, level):
+    def __init__(self, level,M_block):
         self.N = 8
         self.n = 8.0
         self.T = np.zeros((self.N, self.N), dtype='float_')
@@ -22,14 +22,7 @@ class DCT_Demo(object):
                              [24, 35, 55, 64, 81, 104, 113, 92],
                              [49, 64, 78, 87, 103, 121, 120, 101],
                              [72, 92, 95, 98, 112, 100, 103, 99]])
-        self.M = np.array([[16, 8, 23, 16, 5, 14, 7, 22],
-                           [20, 14, 22, 7, 14, 22, 24, 6],
-                           [15, 23, 24, 23, 9, 6, 6, 20],
-                           [14, 8, 11, 14, 12, 12, 25, 10],
-                           [10, 9, 11, 9, 13, 19, 5, 17],
-                           [8, 22, 20, 15, 12, 8, 22, 17],
-                           [24, 22, 17, 12, 18, 11, 23, 14],
-                           [21, 25, 15, 16, 23, 14, 22, 22]])
+        self.M = np.copy(M_block)
 
         self.Qlevel = level
         self.Generate_T()
